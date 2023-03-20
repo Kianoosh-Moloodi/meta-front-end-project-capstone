@@ -1,0 +1,166 @@
+/* GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* TYPE STYLES */
+h1,
+h2,
+h3 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+}
+
+h4,
+h5,
+h6 {
+  font-family: 'Karla', sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 65ch;
+}
+
+span {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #495e57;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer img {
+  max-height: 70%;
+}
+
+footer h3 {
+  color: #f4ce14;
+}
+
+footer li,
+footer a {
+  color: #edefee;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* LAYOUT */
+#root {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+header,
+nav,
+main,
+footer {
+  grid-column: 1 / -1;
+}
+
+header {
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 950px) {
+  #root {
+    grid-template-columns: repeat(12, auto);
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  header {
+    grid-column: 1 / 4;
+    justify-content: end;
+    padding: 2rem;
+  }
+
+  nav {
+    grid-column: 4 / 13;
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1280px) {
+  header {
+    grid-column: 1 / 4;
+  }
+
+  nav {
+    grid-column: 4 / 13;
+    max-width: 60%;
+  }
+
+  footer {
+    justify-content: center;
+    padding: 2rem 4rem;
+  }
+
+  footer section {
+    width: 75%;
+  }
+
+  footer img {
+    max-height: 100%;
+  }
+}
